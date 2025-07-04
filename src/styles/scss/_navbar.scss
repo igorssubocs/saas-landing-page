@@ -1,0 +1,57 @@
+@use '_variable' as *;
+@use 'sass:color';
+
+nav.navbar {
+	padding: 25px 50px;
+  	.container {
+		display: flex;
+		text-align: center;
+		justify-content: space-between;
+		.nav__logo {
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 24px;
+		}
+		.menu {
+			display: flex;
+			gap: 30px;
+			align-items: center;
+			button.signup {
+				line-height: 32px;
+				color: #FFF;
+
+				transition: background-color 0.8s ease-in-out 0.1s;
+				&:hover {
+					background-color: color.adjust($purple-color, $lightness: -10%);
+					cursor: pointer;
+				}
+			}
+			button.login {
+				background-color: $purple-color;
+				padding: 9px 61px;
+				
+				transition: background-color 0.8s ease-in-out 0.1s;
+				&:hover {
+					background-color: color.adjust($purple-color, $lightness: -10%);
+					cursor: pointer;
+				}
+			}
+			@media (max-width: 1024px) {
+				button {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	nav.navbar {
+		.container {
+			justify-content: flex-start;
+			.nav__logo {
+				margin-right: auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@use '_variable' as *;
+
+section.brands {
+	padding: 0 100px;
+	.container {
+		border-top: solid 1px rgba(255, 255, 255, 0.125);
+		border-bottom: solid 1px rgba(255, 255, 255, 0.125);
+		padding: 68px 0;
+		max-width: 1280px;
+		margin: 0 auto;
+		.brands-list {
+			display: block;
+			max-width: 931px;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	section.brands {
+		padding: 0 15px;
+		.container {
+			padding: 50px 0;
+			.brands-list {
+				max-width: 100%;
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}

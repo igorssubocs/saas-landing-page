@@ -1,0 +1,45 @@
+@use '_variable' as *;
+
+section.features {
+	padding: 50px 0;
+	.container {
+		.cards {
+			display: flex;
+			gap: 50px;
+			justify-content: center;
+			.card {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				align-items: center;
+				width: 311px;
+				img {
+					margin-bottom: 40px;
+					width: 70px;
+					height: 70px;
+				}
+				h3,p {
+					font-size: 18px;
+					font-weight: 600;
+					line-height: 32px;
+				}
+				p {
+					font-weight: 400;
+					opacity: 20%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	section.features {
+		.container {
+			.cards {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@use '_variable' as *;
+
+section.product {
+  padding: 100px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+
+    .prod__image {
+      border-radius: 15px;
+      background-color: $yellow-color;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+@media (max-width: 1280px) {
+	.container {
+		padding: 0 40px;
+		.prod__image {
+			padding: 0 20px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	padding: 50px 0;
+		.container {
+			padding: 0 20px;
+		}
+	}
+}

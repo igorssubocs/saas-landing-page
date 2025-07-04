@@ -1,0 +1,56 @@
+@use '_variable' as *;
+@use 'sass:color';
+
+section.cta {
+	padding: 100px 100px;
+	.container {
+		display: flex;
+		align-items: center;
+		gap: 115px;
+		.cta__title {
+			font-size: 60px;
+			font-weight: 600;
+			line-height: 90px;
+		}
+		.cta__subtitle {
+			opacity: 20%;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 32px;
+			margin-top: 30px;
+			margin-bottom: 40px;
+		}
+		button.get-started {
+			background-color: $yellow-color;
+			padding: 9px 36px;
+
+			transition: background-color 0.8s ease-in-out 0.1s;
+			&:hover {
+				background-color: color.adjust($yellow-color, $lightness: -10%);
+				cursor: pointer;
+			}
+		}
+		.cta-image {
+			background: $button-color;
+			border-radius: 15px;
+		}
+		@media (max-width: 1024px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	section.cta {
+		.container {
+			display: flex;
+			text-align: center;
+			.cta__title {
+				font-size: 40px;
+				font-weight: 600;
+				line-height: 60px;
+			}
+		}
+	}
+}
